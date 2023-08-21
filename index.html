@@ -12,11 +12,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
       <header>
-        <div class="container">
+        <div class="container container--header">
           <div class="header-wrapper">
             <a href="#" class="logo">
               <img
@@ -26,7 +30,12 @@
               />
               <div class="logo--title">WonderLit Books</div>
             </a>
-            <nav>
+            <input type="checkbox" id="toggle-menu" class="toggle-input">
+            <label for="toggle-menu" class="nav-icons">
+              <i class="bx bx-menu" id="menu-icon"></i>
+              <i class="bx bx-x" id="close-icon"></i>
+            </label>
+            <nav class="nav-desktop">
               <ul class="nav-wrapper">
                 <li class="nav-item"><a href="#">Trending</a></li>
                 <li class="nav-item"><a href="#">New Releases</a></li>
@@ -35,6 +44,13 @@
             </nav>
           </div>
         </div>
+        <nav class="nav-mobile" id="#nav-mobile">
+          <ul class="nav-wrapper">
+            <li class="nav-item"><a href="#">Trending</a></li>
+            <li class="nav-item"><a href="#">New Releases</a></li>
+            <li class="nav-item"><a href="#">All Genres</a></li>
+          </ul>
+        </nav>
       </header>
     </main>
   </body>
