@@ -58,44 +58,46 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.logo--img {
-  width: 60px;
-}
-.logo--title {
-  margin-left: 8px;
-  font-weight: 700;
-  color: var(--color-black-800);
+  &--img {
+    width: 60px;
+  }
+  &--title {
+    margin-left: 8px;
+    font-weight: 700;
+    color: var(--color-black-800);
+  }
 }
 
 #toggle-menu {
   display: none;
 }
 
-.nav-mobile {
-  display: none;
-}
-.nav-wrapper {
-  display: flex;
-  list-style: none;
-  column-gap: 30px;
-}
-.nav-item {
-  font-weight: 500;
-  padding: 8px;
-}
-.nav-item a {
-  color: var(--color-black-800);
-}
-.nav-item:hover {
-  margin-bottom: -1px;
-  border-bottom: 1px solid #121823;
-}
-.nav-icons {
-  display: none;
-  font-size: 24px;
-  color: var(--color-black-800);
-  cursor: pointer;
+.nav {
+  &-mobile {
+    display: none;
+  }
+  &-wrapper {
+    display: flex;
+    list-style: none;
+    column-gap: 30px;
+  }
+  &-item {
+    font-weight: 500;
+    padding: 8px;
+    a {
+      color: var(--color-black-800);
+    }
+    &:hover {
+      margin-bottom: -1px;
+      border-bottom: 1px solid #121823;
+    }
+  }
+  &-icons {
+    display: none;
+    font-size: 24px;
+    color: var(--color-black-800);
+    cursor: pointer;
+  }
 }
 
 /* breakpoints */
@@ -107,6 +109,7 @@ header {
     padding: 12px 0;
   }
 }
+
 @media only screen and (max-width: 1024px) {
   .container {
     padding: 0 16px;
@@ -115,25 +118,32 @@ header {
     padding: 8px 0;
   }
 }
+
 @media only screen and (max-width: 640px) {
-  .nav-icons {
-    display: block;
+  .nav {
+    &-icons {
+      display: block;
+      #close-icon {
+        display: none;
+      }
+    }
+    &-desktop {
+      display: none;
+    }
+    &-mobile {
+      display: block;
+    }
   }
-  .nav-icons #close-icon {
-    display: none;
+
+  #toggle-menu:checked {
+    & ~ .nav-icons #menu-icon {
+      display: none;
+    }
+    & ~ .nav-icons #close-icon {
+      display: block;
+    }
   }
-  .nav-desktop {
-    display: none;
-  }
-  .nav-mobile {
-    display: block;
-  }
-  #toggle-menu:checked ~ .nav-icons #menu-icon {
-    display: none;
-  }
-  #toggle-menu:checked ~ .nav-icons #close-icon {
-    display: block;
-  }
+
   #toggle-menu:checked nav {
     position: absolute;
     bottom: 0;
@@ -142,9 +152,11 @@ header {
     transform: translateY(0%);
     transition: all 0.5s ease-in-out;
   }
+
   #toggle-menu:checked ~ nav {
     transform: translateY(100%);
   }
+
   .nav-wrapper {
     background-color: var(--color-gray-50);
     display: flex;
@@ -154,5 +166,3 @@ header {
     row-gap: 6px;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */
