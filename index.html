@@ -16,11 +16,13 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <script src="/js/jquery-3.7.0.min.js"></script>
+    <script src="/js/function.js"></script>
   </head>
   <body>
     <main>
       <header>
-        <div class="container container--header">
+        <div class="container container--header" id="container">
           <div class="header-wrapper">
             <a href="#" class="logo">
               <img
@@ -44,8 +46,8 @@
             </nav>
           </div>
         </div>
-        <nav class="nav-mobile" id="#nav-mobile">
-          <ul class="nav-wrapper">
+        <nav class="nav-mobile">
+          <ul class="nav-wrapper" id="nav-mobile-wrapper">
             <li class="nav-item"><a href="#">Trending</a></li>
             <li class="nav-item"><a href="#">New Releases</a></li>
             <li class="nav-item"><a href="#">All Genres</a></li>
