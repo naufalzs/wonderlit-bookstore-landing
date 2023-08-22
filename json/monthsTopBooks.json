@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "title": "Working Backwards",
+      "author": "Colin Bryar and Bill Carr",
+      "cover": "/img/book-1.jpg",
+      "price": 24.99
+    },
+    {
+      "title": "Things We Never Got Over",
+      "author": "Lucy Score",
+      "cover": "/img/book-2.jpg",
+      "price": 24.99
+    },
+    {
+      "title": "1984",
+      "author": "George Orwell",
+      "cover": "/img/book-3.jpg",
+      "price": 24.99
+    },
+    {
+      "title": "It Will All Work Out",
+      "author": "Kevin Hart",
+      "cover": "/img/book-4.jpg",
+      "price": 24.99
+    },
+    {
+      "title": "One Day with You",
+      "author": "Shari Low",
+      "cover": "/img/book-5.jpg",
+      "price": 24.99
+    },
+    {
+      "title": "Like a River",
+      "author": "Granger Smith",
+      "cover": "/img/book-6.jpg",
+      "price": 24.99
+    },
+    {
+      "title": "Things We Hide From the Light",
+      "author": "Lucy Score",
+      "cover": "/img/book-7.jpg",
+      "price": 24.99
+    },
+    {
+      "title": "Birthday Girl",
+      "author": "Penelope Douglas",
+      "cover": "/img/book-8.jpg",
+      "price": 24.99
+    },
+    {
+      "title": "They Called Us Exceptional",
+      "author": "Prachi Gupta",
+      "cover": "/img/book-9.jpg",
+      "price": 24.99
+    },
+    {
+      "title": "The Bee Sting",
+      "author": "Paul Murray",
+      "cover": "/img/book-10.jpg",
+      "price": 24.99
+    }
+  ]
+}
