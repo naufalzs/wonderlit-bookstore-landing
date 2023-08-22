@@ -34,6 +34,18 @@ a {
   text-decoration: none;
 }
 
+.btn {
+  outline: none;
+  border: none;
+  padding: 16px 20px;
+  background-color: var(--color-primary);
+  font-family: var(--font-noto);
+  font-size: 18px;
+  color: white;
+  text-transform: capitalize;
+  border-radius: 8px;
+}
+
 /* header styling */
 header {
   position: relative;
@@ -98,24 +110,82 @@ header {
   cursor: pointer;
 }
 
+.hero--section {
+  background-color: var(--color-gray-50);
+}
+
+.hero {
+  padding: 45px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10%;
+}
+.hero--title {
+  font-family: var(--font-roboto);
+  font-size: 68px;
+  color: var(--color-black-800);
+}
+.hero--content {
+  margin: 36px 0 52px;
+  font-family: var(--font-noto);
+  font-size: 22px;
+}
+
 /* breakpoints */
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1279px) {
   .container {
-    padding: 0 24px;
+    padding: 0 36px;
+  }
+  .btn {
+    padding: 14px 18px;
+    font-size: 16px;
   }
   .header-wrapper {
     padding: 12px 0;
   }
+  .hero {
+    padding: 38px 0;
+  }
+  .hero--title {
+    font-size: 58px;
+  }
+  .hero--content {
+    margin: 22px 0 32px;
+    font-size: 18px;
+  }
+  .hero-figure--img {
+    width: 480px;
+  }
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .container {
-    padding: 0 16px;
+    padding: 0 24px;
+  }
+  .btn {
+    width: 100%;
   }
   .header-wrapper {
     padding: 8px 0;
   }
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+  .hero--title {
+    font-size: 40px;
+  }
+  .hero--content {
+    margin: 22px 0 32px;
+    font-size: 16px;
+  }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 639px) {
+  .container {
+    padding: 0 16px;
+  }
   .nav-icons {
     display: block;
   }
@@ -128,6 +198,7 @@ header {
   .nav-mobile {
     display: block;
     height: 0;
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
   }
   .nav-wrapper {
     background-color: var(--color-gray-50);
@@ -147,6 +218,13 @@ header {
   }
   #toggle-menu:checked ~ .nav-icons #close-icon {
     display: block;
+  }
+  .hero {
+    padding: 38px 0;
+    gap: 30px;
+  }
+  .hero-figure--img {
+    width: 300px;
   }
 }
 
