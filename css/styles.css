@@ -59,6 +59,10 @@ a {
   text-transform: capitalize;
   border-radius: 8px;
 }
+.btn--sm {
+  padding: 14px 18px;
+  font-size: 16px;
+}
 
 /* header styling */
 .header__wrapper {
@@ -130,6 +134,53 @@ a {
   font-size: 22px;
 }
 
+.top-books {
+  padding: 100px 0;
+}
+.top-books__text {
+  margin-bottom: 55px;
+  text-align: center;
+}
+.top-books__title {
+  margin-bottom: 30px;
+  color: var(--color-black-800);
+  font-family: var(--font-roboto);
+  font-size: 54px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.top-books__tagline {
+  font-size: 22px;
+}
+.top-books__main-content {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  column-gap: 32px;
+  row-gap: 68px;
+}
+
+.book__cover {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+.book__title {
+  margin-top: 8px;
+  color: var(--color-black-800);
+  font-size: 22px;
+  font-weight: 700;
+}
+.book__author {
+  margin: 4px 0 8px;
+  font-size: 14px;
+}
+.book__price {
+  margin-bottom: 18px;
+  color: var(--color-black-800);
+  font-size: 24px;
+  font-weight: 700;
+}
+
 /* breakpoints */
 @media only screen and (max-width: 1279px) {
   .container {
@@ -138,6 +189,9 @@ a {
   .btn {
     padding: 14px 18px;
     font-size: 16px;
+  }
+  .btn--sm {
+    padding: 12px 18px;
   }
   .header__wrapper {
     padding: 12px 0;
@@ -163,6 +217,9 @@ a {
   .btn {
     width: 100%;
   }
+  .btn--sm {
+    width: auto;
+  }
   .header__wrapper {
     padding: 8px 0;
   }
@@ -179,10 +236,19 @@ a {
     margin: 22px 0 32px;
     font-size: 16px;
   }
+  .top-books__main-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 24px;
+    row-gap: 36px;
+  }
 }
 @media only screen and (max-width: 639px) {
   .container {
     padding: 0 16px;
+  }
+  .btn--sm {
+    padding: 10px 16px;
+    font-size: 14px;
   }
   .nav__icons {
     display: block;
@@ -223,6 +289,32 @@ a {
   }
   .hero__img {
     width: 300px;
+  }
+  .top-books {
+    padding: 70px 0;
+  }
+  .top-books__text {
+    margin-bottom: 40px;
+  }
+  .top-books__title {
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+  .top-books__tagline {
+    font-size: 16px;
+  }
+  .top-books__main-content {
+    column-gap: 12px;
+    row-gap: 26px;
+  }
+  .book__title {
+    font-size: 16px;
+  }
+  .book__author {
+    font-size: 12px;
+  }
+  .book__price {
+    font-size: 16px;
   }
 }
 
