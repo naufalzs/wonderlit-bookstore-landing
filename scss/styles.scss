@@ -35,6 +35,9 @@ body {
   &--hero {
     background-color: var(--color-gray-50);
   }
+  &--reviews {
+    background-color: var(--color-gray-50);
+  }
 }
 
 .container {
@@ -194,6 +197,64 @@ a {
   }
 }
 
+// reviews styling
+.review {
+  position: relative;
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__wrapper {
+    padding: 100px 0 90px;
+  }
+  &__text {
+    margin-bottom: 38px;
+    color: var(--color-black-800);
+    font-family: var(--font-roboto);
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+  }
+  &__id {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.id {
+  &__avatar {
+    margin-right: 16px;
+    width: 68px;
+    height: 68px;
+    border-radius: 100%;
+    background-color: bisque;
+  }
+  &__name {
+    color: var(--color-black-800);
+    font-size: 18px;
+    font-weight: 600;
+  }
+  &__job {
+    margin: 4px 0;
+    color: var(--color-black-800);
+    font-size: 14px;
+  }
+}
+
+.rating {
+  &__container {
+    display: flex;
+    gap: 2px;
+  }
+  &__star {
+    font-size: 20px;
+    color: var(--color-star);
+  }
+}
+
 /* breakpoints */
 @media only screen and (max-width: 1279px) {
   .container {
@@ -255,6 +316,21 @@ a {
       grid-template-columns: repeat(2, minmax(0, 1fr));
       column-gap: 24px;
       row-gap: 36px;
+    }
+  }
+  .review {
+    &__wrapper {
+      padding: 80px 0 70px;
+    }
+    &__text {
+      font-size: 30px;
+    }
+  }
+  .id {
+    &__avatar {
+      width: 54px;
+      height: 54px;
+  
     }
   }
 }
@@ -344,6 +420,16 @@ a {
     }
     &__price {
       font-size: 16px;
+    }
+  }
+
+  .review {
+    width: 100%;
+    &__wrapper {
+      padding: 55px 0 50px;
+    }
+    &__text {
+      font-size: 28px;
     }
   }
 }

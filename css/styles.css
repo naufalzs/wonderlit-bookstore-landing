@@ -11,11 +11,11 @@
   --color-black-400: #848b9c;
   --color-black-800: #121823;
   --color-gray-50: #f7f8f9;
+  --color-gray-100: #eaecf1;
   --color-primary: #4340d8;
   --color-secondary: #473191;
   --color-star: #f37f45;
   --color-tagline: #62bfc6;
-  --color-gray-100: #eaecf1;
   --color-footer: #b4bcc6;
 }
 
@@ -31,6 +31,9 @@ body {
   font-family: var(--font-roboto);
 }
 .section--hero {
+  background-color: var(--color-gray-50);
+}
+.section--reviews {
   background-color: var(--color-gray-50);
 }
 
@@ -182,6 +185,59 @@ a {
   font-weight: 700;
 }
 
+.review {
+  position: relative;
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.review__wrapper {
+  padding: 100px 0 90px;
+}
+.review__text {
+  margin-bottom: 38px;
+  color: var(--color-black-800);
+  font-family: var(--font-roboto);
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+}
+.review__id {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.id__avatar {
+  margin-right: 16px;
+  width: 68px;
+  height: 68px;
+  border-radius: 100%;
+  background-color: bisque;
+}
+.id__name {
+  color: var(--color-black-800);
+  font-size: 18px;
+  font-weight: 600;
+}
+.id__job {
+  margin: 4px 0;
+  color: var(--color-black-800);
+  font-size: 14px;
+}
+
+.rating__container {
+  display: flex;
+  gap: 2px;
+}
+.rating__star {
+  font-size: 20px;
+  color: var(--color-star);
+}
+
 /* breakpoints */
 @media only screen and (max-width: 1279px) {
   .container {
@@ -241,6 +297,16 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 24px;
     row-gap: 36px;
+  }
+  .review__wrapper {
+    padding: 80px 0 70px;
+  }
+  .review__text {
+    font-size: 30px;
+  }
+  .id__avatar {
+    width: 54px;
+    height: 54px;
   }
 }
 @media only screen and (max-width: 639px) {
@@ -317,6 +383,15 @@ a {
   }
   .book__price {
     font-size: 16px;
+  }
+  .review {
+    width: 100%;
+  }
+  .review__wrapper {
+    padding: 55px 0 50px;
+  }
+  .review__text {
+    font-size: 28px;
   }
 }
 
