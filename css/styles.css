@@ -13,6 +13,7 @@
   --color-gray-50: #f7f8f9;
   --color-primary: #4340d8;
   --color-secondary: #473191;
+  --color-star: #f37f45;
   --color-tagline: #62bfc6;
   --color-gray-100: #eaecf1;
   --color-footer: #b4bcc6;
@@ -262,7 +263,8 @@ a {
   .nav--mobile {
     display: block;
     height: 0;
-    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04))
+      drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
   }
   .nav__wrapper {
     background-color: var(--color-gray-50);
