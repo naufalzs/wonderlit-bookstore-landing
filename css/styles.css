@@ -14,7 +14,7 @@
   --color-gray-100: #eaecf1;
   --color-purple-800: #473191;
   --color-primary: #4340d8;
-  --color-secondary: #704DD0;
+  --color-secondary: #704dd0;
   --color-star: #f37f45;
   --color-tagline: #62bfc6;
   --color-footer: #b4bcc6;
@@ -36,6 +36,9 @@ body {
 }
 .section--reviews {
   background-color: var(--color-gray-50);
+}
+.section--subscribe {
+  background-color: var(--color-purple-800);
 }
 
 .container {
@@ -73,6 +76,9 @@ a {
   border: 2px solid var(--color-gray-100);
   background-color: transparent;
   color: var(--color-black-800);
+}
+.btn--secondary {
+  background-color: var(--color-secondary);
 }
 
 /* header styling */
@@ -329,6 +335,38 @@ a {
   object-fit: contain;
 }
 
+.subscribe {
+  padding: 100px 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.subscribe__text {
+  width: 45%;
+  color: white;
+}
+.subscribe__title {
+  font-family: var(--font-roboto);
+  font-size: 38px;
+}
+.subscribe__desc {
+  margin-top: 22px;
+  font-size: 18px;
+}
+.subscribe__form {
+  display: flex;
+  gap: 20px;
+}
+.subscribe__input {
+  border: none;
+  outline: none;
+  width: 350px;
+  height: 48px;
+  padding: 4px 16px;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
 /* breakpoints */
 @media only screen and (max-width: 1279px) {
   .container {
@@ -404,6 +442,23 @@ a {
     width: 54px;
     height: 54px;
   }
+  .subscribe {
+    padding: 85px 0 65px;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .subscribe__text {
+    width: auto;
+  }
+  .subscribe__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .subscribe__input {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 639px) {
   .container {
@@ -425,8 +480,7 @@ a {
   .nav--mobile {
     display: block;
     height: 0;
-    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04))
-      drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
   }
   .nav__wrapper {
     background-color: var(--color-gray-50);
