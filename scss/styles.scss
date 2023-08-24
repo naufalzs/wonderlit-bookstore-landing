@@ -187,11 +187,18 @@ a {
 .book {
   &__cover {
     width: 100%;
+    aspect-ratio: 0.658;
     object-fit: contain;
     border-radius: 4px;
   }
   &__title {
     margin-top: 8px;
+    height: 60px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: var(--color-black-800);
     font-size: 22px;
     font-weight: 700;
@@ -617,6 +624,7 @@ a {
 
   .book {
     &__title {
+      height: 44px;
       font-size: 16px;
     }
     &__author {
