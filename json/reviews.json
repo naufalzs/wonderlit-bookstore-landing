@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "avatar": "/img/avatar-1.jpg",
+      "name": "Sidney Olivia",
+      "content": "Top-notch online bookstore! Unmatched variety of books, hassle-free navigation, speedy delivery. A paradise for readers.",
+      "job": "Poems Reader",
+      "rating": 4.3
+    },
+    {
+      "avatar": "/img/avatar-2.jpg",
+      "name": "Roger Schwazeneger",
+      "content": "Fantastic online bookstore! Wide book selection, easy browsing, and fast shipping. A bookworm's dream come true.",
+      "job": "Senior Poet",
+      "rating": 4.3
+    },
+    {
+      "avatar": "/img/avatar-3.jpg",
+      "name": "Sonia Labeouf",
+      "content": "5/5 for this online bookstore! Limitless books, seamless shopping, and quick deliveries. Book enthusiasts, rejoice!",
+      "job": "Book editor",
+      "rating": 4.8
+    }
+  ]
+}

@@ -11,11 +11,17 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+Chorasmian&family=Roboto:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/styles.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="/js/jquery-3.7.0.min.js"></script>
     <script src="/js/function.js"></script>
   </head>
@@ -95,26 +101,17 @@
       <section class="section--reviews">
         <div class="container">
           <div class="review__wrapper">
-            <div class="review">
-              <div class="review__text">
-                Top-notch online bookstore! Unmatched variety of books,
-                hassle-free navigation, speedy delivery. A paradise for readers
+            <div class="swiper swiper-review">
+              <div class="swiper-wrapper review__swiper">
+                <div class="swiper-slide swiper-slide--1"></div>
+                <div class="swiper-slide swiper-slide--2"></div>
+                <div class="swiper-slide swiper-slide--3"></div>
               </div>
-              <div class="review__id">
-                <img src="" alt="" class="id__avatar" />
-                <div>
-                  <div class="id__name">Sidney Olivia</div>
-                  <div class="id__job">"Poems Reader"</div>
-                  <div class="id__rating">
-                    <div class="rating__container">
-                      <i class="bx bxs-star rating__star"></i>
-                      <i class="bx bxs-star rating__star"></i>
-                      <i class="bx bxs-star rating__star"></i>
-                      <i class="bx bxs-star rating__star"></i>
-                      <i class="bx bxs-star-half rating__star"></i>
-                    </div>
-                  </div>
-                </div>
+              <div class="swiper-review__btn swiper-review__btn--prev">
+                <i class="bx bx-left-arrow-alt swiper-review__btn-icon"></i>
+              </div>
+              <div class="swiper-review__btn swiper-review__btn--next">
+                <i class="bx bx-right-arrow-alt swiper-review__btn-icon"></i>
               </div>
             </div>
           </div>
