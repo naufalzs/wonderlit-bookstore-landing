@@ -14,10 +14,13 @@
   --color-gray-100: #eaecf1;
   --color-purple-800: #473191;
   --color-primary: #4340d8;
+  --color-primary-hover: #504ED9;
   --color-secondary: #704dd0;
+  --color-secondary-hover: #7859D0;
   --color-star: #f37f45;
   --color-tagline: #62bfc6;
   --color-btn-swiper: #2a99a6;
+  --color-btn-swiper-hover: #2EA7B6;
   --color-footer: #b4bcc6;
 }
 
@@ -69,6 +72,9 @@ a {
   border-radius: 8px;
   cursor: pointer;
 }
+.btn:hover {
+  background-color: var(--color-primary-hover);
+}
 .btn--sm {
   padding: 14px 18px;
   font-size: 16px;
@@ -78,8 +84,14 @@ a {
   background-color: transparent;
   color: var(--color-black-800);
 }
+.btn--outline:hover {
+  background-color: var(--color-gray-50);
+}
 .btn--secondary {
   background-color: var(--color-secondary);
+}
+.btn--secondary:hover {
+  background-color: var(--color-secondary-hover);
 }
 
 .swiper {
@@ -98,6 +110,9 @@ a {
   align-items: center;
   border-radius: 50%;
   cursor: pointer;
+}
+.swiper-review__btn:hover {
+  background-color: var(--color-btn-swiper-hover);
 }
 .swiper-review__btn-icon {
   color: white;
