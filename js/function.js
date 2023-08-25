@@ -9,6 +9,7 @@ $(document).ready(function () {
     const currentPos = $(document).scrollTop().valueOf();
     if (startPos < currentPos) {
       $("#nav-mobile-wrapper").removeClass("nav__wrapper--active");
+      $("#toggle-menu").prop('checked', false)
     }
   });
 
