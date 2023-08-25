@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // navbar menu function
   $("#toggle-menu").change(function (e) {
     $("#nav-mobile-wrapper").toggleClass("nav__wrapper--active");
   });
@@ -11,6 +12,7 @@ $(document).ready(function () {
     }
   });
 
+  // display top books section
   $.getJSON("/json/monthsTopBooks.json", function (data) {
     function createBookEl(book) {
       const $book = $("<div/>", {
@@ -52,6 +54,7 @@ $(document).ready(function () {
     $(".top-books__main-content").prepend(listBooks);
   });
 
+  // review slider config
   let swiper = new Swiper(".swiper-review", {
     slidesPerView: 1,
     speed: 400,
@@ -63,6 +66,7 @@ $(document).ready(function () {
     spaceBetween: 100,
   });
 
+  // display review section
   $.getJSON("/json/reviews.json", function (data) {
     function createReviewEl(review) {
       const $review = $("<div>", {

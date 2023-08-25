@@ -5,6 +5,7 @@
   outline: none;
 }
 
+// variable declaration
 :root {
   --font-roboto: "Roboto", sans-serif;
   --font-noto: "Noto Sans Chorasmian", sans-serif;
@@ -30,6 +31,7 @@ body {
   color: var(--color-black-400);
 }
 
+// utilities styling
 .section {
   &--header {
     position: relative;
@@ -129,7 +131,7 @@ a {
   }
 }
 
-/* header styling */
+/* header section styling */
 .header {
   &__wrapper {
     display: flex;
@@ -185,7 +187,7 @@ a {
   }
 }
 
-// hero styling
+// hero section styling
 .hero {
   padding: 45px 0;
   display: flex;
@@ -204,7 +206,7 @@ a {
   }
 }
 
-// top books styling
+// top books section styling
 .top-books {
   padding: 100px 0;
   &__text {
@@ -261,7 +263,7 @@ a {
   }
 }
 
-// reviews styling
+// review section styling
 .review {
   position: relative;
   width: 75%;
@@ -440,6 +442,7 @@ a {
   }
 }
 
+// footer section styling
 .footer {
   display: flex;
   flex-direction: column;
@@ -479,11 +482,13 @@ a {
     color: var(--color-black-400);
   }
 }
+
 /* breakpoints */
 @media only screen and (max-width: 1279px) {
   .container {
     padding: 0 36px;
   }
+
   .btn {
     padding: 14px 18px;
     font-size: 16px;
@@ -491,9 +496,11 @@ a {
       padding: 12px 18px;
     }
   }
+
   .header__wrapper {
     padding: 12px 0;
   }
+
   .hero {
     padding: 38px 0;
     &__title {
@@ -507,11 +514,13 @@ a {
       width: 480px;
     }
   }
+
   .company {
     padding: 80px 0;
     flex-direction: column;
     gap: 40px;
   }
+
   .footer {
     &__menu {
       padding: 60px 0;
@@ -524,15 +533,18 @@ a {
   .container {
     padding: 0 24px;
   }
+
   .btn {
     width: 100%;
     &--sm {
       width: auto;
     }
   }
+
   .header__wrapper {
     padding: 8px 0;
   }
+
   .hero {
     flex-direction: column;
     justify-content: center;
@@ -546,6 +558,7 @@ a {
       font-size: 16px;
     }
   }
+
   .top-books {
     &__main-content {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -553,6 +566,7 @@ a {
       row-gap: 36px;
     }
   }
+
   .review {
     &__wrapper {
       padding: 80px 0 70px;
@@ -561,12 +575,14 @@ a {
       font-size: 30px;
     }
   }
+
   .id {
     &__avatar {
       width: 54px;
       height: 54px;
     }
   }
+
   .subscribe {
     padding: 85px 0 65px;
     flex-direction: column;
@@ -590,12 +606,14 @@ a {
   .container {
     padding: 0 16px;
   }
+
   .btn {
     &--sm {
       padding: 10px 16px;
       font-size: 14px;
     }
   }
+
   .swiper {
     &-review {
       &__btn {
@@ -603,6 +621,7 @@ a {
       }
     }
   }
+  
   .nav {
     &__icons {
       display: block;
