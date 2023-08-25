@@ -3,6 +3,14 @@ $(document).ready(function () {
     $("#nav-mobile-wrapper").toggleClass("nav__wrapper--active");
   });
 
+  let startPos = 0;
+  $(window).scroll(function () {
+    const currentPos = $(document).scrollTop().valueOf();
+    if (startPos < currentPos) {
+      $("#nav-mobile-wrapper").removeClass("nav__wrapper--active");
+    }
+  });
+
   $.getJSON("/json/monthsTopBooks.json", function (data) {
     function createBookEl(book) {
       const $book = $("<div/>", {
@@ -110,8 +118,8 @@ $(document).ready(function () {
 
         return $ratingContainer.append($stars);
       }
-      const $idRating = createRatingEl(review.rating)
-      
+      const $idRating = createRatingEl(review.rating);
+
       const $idInfo = $("<div>").prepend($idName, $idJob, $idRating);
 
       // create element structure
