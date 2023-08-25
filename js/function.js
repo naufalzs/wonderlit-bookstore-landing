@@ -52,7 +52,7 @@ $(document).ready(function () {
       nextEl: ".swiper-review__btn--next",
       prevEl: ".swiper-review__btn--prev",
     },
-    spaceBetween: 100
+    spaceBetween: 100,
   });
 
   $.getJSON("/json/reviews.json", function (data) {
@@ -83,7 +83,36 @@ $(document).ready(function () {
         class: "id__job",
         text: review.job,
       });
-      const $idInfo = $("<div>").prepend($idName, $idJob);
+
+      // crate rating element
+      function createRatingEl(rating) {
+        const $ratingContainer = $("<div>", {
+          class: "rating__container",
+        });
+
+        const ratingInt = Math.round(rating);
+        const isHalf = Math.round(rating * 2) / 2 - Math.round(ratingInt) > 0;
+
+        let $stars = [];
+        for (let i = 0; i < ratingInt; i++) {
+          const $star = $("<div>", {
+            class: "bx bxs-star rating__star",
+          });
+          $stars.push($star);
+        }
+
+        if (isHalf) {
+          const $halfStar = $("<div>", {
+            class: "bx bxs-star-half rating__star",
+          });
+          $stars.push($halfStar);
+        }
+
+        return $ratingContainer.append($stars);
+      }
+      const $idRating = createRatingEl(review.rating)
+      
+      const $idInfo = $("<div>").prepend($idName, $idJob, $idRating);
 
       // create element structure
       $review.append($reviewText, $reviewId);
@@ -94,9 +123,8 @@ $(document).ready(function () {
 
     const reviewsData = data.data;
     reviewsData.forEach((item, index) => {
-      $slideContent = createReviewEl(item)
+      $slideContent = createReviewEl(item);
       $(".swiper-slide--" + (index + 1)).append($slideContent);
     });
-
   });
 });
